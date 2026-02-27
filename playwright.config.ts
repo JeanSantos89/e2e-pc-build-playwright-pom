@@ -9,22 +9,21 @@ export default defineConfig({
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
+    headless: false
   },
-
   /* Configure projects for major browsers */
-  projects: [
+ projects: [
     {
-      name: 'chromium',
+      name: 'Chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
     {
-      name: 'firefox',
+      name: 'Firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-
     {
-      name: 'webkit',
+      name: 'WebKit',
       use: { ...devices['Desktop Safari'] },
     },
+  ],
 });
